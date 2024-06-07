@@ -6,18 +6,41 @@
     font-style: normal;
 }
 
-.fjalla-one-regular {
-    font-family: "Fjalla One", sans-serif;
-    font-style: normal;
-    font-weight: 400;
+html{
+    scroll-behavior: smooth;
 }
 
-.patua-one-regular {
-    font-family: "Patua One", serif;
-    font-weight: 400;
-    font-style: normal;
+.sticky  {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--primary-color)
+}
+.sticky a{
+    color: var(--font--color1);
 }
 
+body{
+    background: var(--font--color1);
+}
+
+:root{
+    --primary-color: rgb(221, 44, 44);
+    --font--color1 : #eeeaea;
+    --font-color2: #000000;
+    --background-color : #ffffff;
+    --border-color: #f7f7f7;
+    --nav-color: #1b1b1b;
+    --choose-us-p: #000000;
+}
+
+.dark_theme{
+    --primary-color: #000000;
+    --font--color1 :   #727272;
+    --font-color2: #fff;
+    /* --choose-us-p: #f7f7f7; */
+    
+}
 
 section{
     width: 85%;
@@ -30,8 +53,8 @@ header{
 
 }
 .header_top{
-    color: #fff;
-    background: rgb(221, 44, 44);
+    color: var(--font--color1);
+    background: var(--primary-color);
     display: flex;
     justify-content: space-between;
     padding: 1% 8%;
@@ -43,8 +66,8 @@ header{
 }
 
 .header_top p:hover{
-    background: #fff;
-    color: rgb(221, 44, 44);
+    background: var(--font--color1);
+    color: var(--primary-color);
     padding: 5px;
 }
 nav{
@@ -53,6 +76,8 @@ nav{
     justify-content: space-between;
     padding: 0 6%;
     width: 100%;
+    z-index: 99;
+    
 }
 nav .logo{
     width: 40%;
@@ -71,10 +96,15 @@ nav ul li a{
     padding-right: 20px;
     font-size: 18px;
     text-decoration: none;
-    color: #555;
+    color: var(--nav-color);
     
 }
 
+nav ul img{
+    width: 3rem;
+    color: var(--font--color1);
+    cursor: pointer;
+}
 .header_below{
     margin-top: 25px;
     /* background: linear-gradient(60deg, rgba(5, 5, 5, 0.5),  rgba(102, 98, 98, 0.5)); */
@@ -103,12 +133,12 @@ nav ul li a{
 
 /* SECTION 1 */
 .sec_1{
-    /* margin: 30px auto; */
-    background: #f1f1f1;
+    margin: 30px auto;
+    background: var(--background-color);
     width: 100%;
     padding: 8%;
-    height: 100vh;
-    /* margin-bottom: 20rem; */
+    height: 40rem;
+    margin-bottom: 1rem;
 }
 .sec_1 h1{
     font-size: 2.5rem;
@@ -141,7 +171,7 @@ nav ul li a{
     content: '';
     height: 3rem;
     width: 6rem;
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid var(--primary-color);
     position: absolute;
 
 }
@@ -150,21 +180,23 @@ nav ul li a{
     height: 10rem;
 }
 
-/* new section 2 */
+/* SECTION 2 */
 .about_us{
-    margin: 4% auto 6%;
     display: flex;
     align-items: center;
     width: 85%;
     height: 100vh;
-    margin: 3rem auto;
+    margin: 1rem auto;
+
 }
 
 .about_us h1{
     margin-bottom: 1rem;
+    color: var(--font-color2);
 }
 .about_us p{
     font-size: 20px;
+    color: var(--font-color2);
 }
 
 .about_us_w{
@@ -183,22 +215,23 @@ nav ul li a{
     height: 100%;    
     box-shadow:  10px 10px 1px rgba(0, 0, 0, 0.2);
 }
-/* SECTION 2 */
-.sec_2{
-    background: #f3f1f1;
+
+/* SECTION 3 */
+.sec_3{
+    background:var(--background-color);
     width: 100%;
     padding: 2rem 7.5% 2rem;
     height: 80%;
-
 }
-.sec_2 >h1{
-    color:  rgb(221, 44, 44);
+
+.sec_3 >h1{
+    color:  var(--primary-color);
     line-height: 4rem;
     font: bold;
     font-size: 2em;
     font-weight: 900;
     padding-bottom: 20px;
-    border-bottom: 2px solid #b6b3b3;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .contact_sec{
@@ -217,7 +250,7 @@ nav ul li a{
     
 } 
 .contact_left p span i{
-    color:  rgb(221, 44, 44);
+    color:  var(--primary-color);
     font-size: 25px;
     font: bold;
     padding-right: 15px;
@@ -264,25 +297,25 @@ nav ul li a{
 }
 .form_details input.submit_btn{
     width: 30%;
-    background:  rgb(221, 44, 44);
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--font--color1);
     font-size: 20px;
 }
 
-/* Section 3 */
-.sec_3{
-    background:  rgb(221, 44, 44);
+/* Section 4 Proud */
+.sec_4{
+    background:  var(--primary-color);
     height: 11em;
     width: 100%;
-    color: #fff;
+    color: var(--font--color1);
     padding: 4rem 12% ;
     font-size: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-/* sec 4 */
-.sec_4{
+/* sec 5 Why Choose Us */
+.sec_5{
     height: fit-content;
     margin-bottom: 4rem;
 }
@@ -297,11 +330,12 @@ nav ul li a{
 }
 
 .choose_us p{
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     margin-top: 2rem;
+    color: var(--choose-us-p);
 }
-.sec_4_boxes{
+.sec_5_boxes{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin-top: 4rem;
@@ -326,13 +360,15 @@ nav ul li a{
 
 .choose_us_box > h2{
     text-align: center;
-    color: #fff;
+    color: var(--border-color);
     padding-top: 20px;
 }
 
 .choose_us_box > p{
-    color: #fff;
+    color: var(--border-color);
     padding-top: 20px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
 }
 
 /* Footer */
@@ -352,5 +388,26 @@ footer i{
 }
 
 footer i:hover{
-    color: blue;
+    color: rgb(140, 140, 224);
+}
+
+/* scroll to the top btn */
+#my_scroll_up_btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 80;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color:  var(--primary-color);
+    color: var(--font--color1);
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#my_scroll_up_btn :hover {
+    background-color: #555;
 }

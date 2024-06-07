@@ -18,20 +18,21 @@
 <body>
     <header>
         <div class="header_top">
-            <h2>ALWAYS OPEN! We work 24/7</h2>
-            <p>CALL NOW! +234-906-944-2951</p>
+            <h2>ALWAYS OPEN! <span></span> We work 24/7</h2>
+            <p>CALL NOW! <span></span>+234-906-944-2951</p>
         </div>
         
-        <nav>
+        <nav id="my_nav">
             <div class="logo">
                 <img src="image/company_logo-removebg-preview.png" alt="">
             </div>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Why Choose Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#our_service">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#choose">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <img src="image/moon.png" alt="moon" id="moon">
             </ul>
         </nav>
         
@@ -42,12 +43,10 @@
             <h1>Welcome to Xenonics</h1>
             <p>Beyond Boundaries, Beyond Bytes</p>
         </div>
-        
-       
     </div>
 
     <!-- SECTION 1 -->
-    <section class="sec_1">
+    <section class="sec_1" id="our_service">
         <h1>OUR SERVICES</h1>
         <div class="services_pic">
             <div class="sec_1_service">
@@ -70,7 +69,9 @@
         </div>
         
     </section>
-    <section class="about_us">
+
+    <!-- SECTION 2 -->
+    <section class="about_us" id="about">
         <div class="about_us_w">
             <h1>ABOUT US</h1>
             <p>Welcome to Xenonics, your trusted partner in comprehensive electronics and electrical services. With a commitment to excellence and customer satisfaction, we specialize in the repair and installation of electronic devices, wiring solutions for both commercial and residential properties, and cutting-edge website development.</p>
@@ -93,10 +94,11 @@
         
     </section>
 
-    <section class="sec_2">
+    <!-- SECTION 3 -->
+    <section class="sec_3">
         <h3>we work 24/7</h3>
         <h1>CALL +234-906-944-2951</h2>
-        <div class="contact_sec">
+        <div class="contact_sec" id="contact">
             <div class="contact_left"> 
                 <h1>CONTACT</h1>
                 <p><span><i class="uil uil-envelope-open"></i> xenonics247@gmail.com</span></p>
@@ -127,17 +129,19 @@
         
     </section>
 
-    <section class="sec_3">
+<!-- SECTION 4 -->
+    <section class="sec_4">
             <h2>we are very proud to be serving our local area for over 10years </h2>
             <img src="" alt="WhatsApp img">
     </section>
 
-    <section class="sec_4">
+    <!-- SECTION 5 -->
+    <section class="sec_5" id="choose">
         <div class="choose_us">
             <h2>Why Choose Us</h2>
             <p>Choosing Xenonics means choosing a partner dedicated to your safety and financial well-being. Trust us to deliver high-quality, safe, and affordable solutions that meet and exceed your expectations.</p>
         </div> 
-        <div  class="sec_4_boxes">
+        <div  class="sec_5_boxes">
             <div class="choose_us_box">
                 <i class="uil uil-shield-check"></i>
                 <h2>Safe & Secure</h2>
@@ -170,5 +174,9 @@
             <i class="uil uil-google"></i>
         </div>
     </footer>
+
+    <button onclick="topFunction()" id="my_scroll_up_btn">Top</button>
+
+    <script src="main.js"></script>
 </body>
 </html>
